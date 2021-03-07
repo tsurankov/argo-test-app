@@ -1,0 +1,19 @@
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  annotations:
+    kubernetes.io/ingress.class: nginx
+  name: appuio
+spec:
+  rules:
+    - host: appuio.local
+      http:
+        paths:
+          - backend:
+              service:
+                name: appuio
+                port:
+                  number: 8080
+            path: /
+            pathType: Prefix

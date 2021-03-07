@@ -1,0 +1,4 @@
+---
+namespace: appuio-dev
+bases:
+- ../../base

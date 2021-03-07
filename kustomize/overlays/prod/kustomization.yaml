@@ -1,0 +1,4 @@
+---
+namespace: appuio-prod
+bases:
+- ../../base
