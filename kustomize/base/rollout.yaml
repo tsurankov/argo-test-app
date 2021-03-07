@@ -23,7 +23,7 @@ spec:
     spec:
       containers:
         - name: appuio
-          image: appuio/example-spring-boot:latest
+          image: gazgeek/springboot-helloworld
           imagePullPolicy: Always
           ports:
           - containerPort: 8080

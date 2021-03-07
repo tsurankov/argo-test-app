@@ -1,0 +1,13 @@
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Rollout
+metadata:
+  name: appuio
+spec:
+  replicas: 1
+  selector:
+  template:
+    spec:
+      containers:
+        - name: appuio
+          image: appuio/example-spring-boot:latest
