@@ -2,3 +2,5 @@
 namespace: appuio-prod
 bases:
 - ../../base
+patchesStrategicMerge:
+- ingress.yaml
