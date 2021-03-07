@@ -14,4 +14,4 @@ spec:
     spec:
       containers:
         - name: appuio
-          image: tsurankov/example-spring-boot-helloworld:1.1.0
+          image: tsurankov/example-spring-boot-helloworld:1.2.0
