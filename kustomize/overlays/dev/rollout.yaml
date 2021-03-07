@@ -5,7 +5,7 @@ metadata:
   name: appuio
 spec:
   strategy:
-    blueGreen: 
+    blueGreen:
       activeService: appuio
       previewService: appuio-preview
       autoPromotionEnabled: true

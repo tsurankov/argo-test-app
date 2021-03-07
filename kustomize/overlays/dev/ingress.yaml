@@ -6,3 +6,12 @@ metadata:
 spec:
   rules:
     - host: appuio-dev.local
+      http:
+        paths:
+          - backend:
+              service:
+                name: appuio
+                port:
+                  number: 8080
+            path: /
+            pathType: Prefix
