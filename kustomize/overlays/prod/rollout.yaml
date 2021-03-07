@@ -4,11 +4,6 @@ kind: Rollout
 metadata:
   name: appuio
 spec:
-  strategy:
-    blueGreen: 
-      activeService: appuio
-      previewService: appuio-preview
-      autoPromotionEnabled: true
   replicas: 1
   template:
     spec:

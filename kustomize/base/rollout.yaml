@@ -7,10 +7,10 @@ metadata:
     app: appuio
 spec:
   strategy:
-    canary:                        # Changed from rollingUpdate or recreate
-      steps:
-      - setWeight: 20
-      - pause: {}
+    blueGreen: 
+      activeService: appuio
+      previewService: appuio-preview
+      autoPromotionEnabled: false
   replicas: 1
   selector:
     matchLabels:
@@ -23,7 +23,7 @@ spec:
     spec:
       containers:
         - name: appuio
-          image: gazgeek/springboot-helloworld
+          image: tsurankov/example-spring-boot-helloworld:1.0.0
           imagePullPolicy: Always
           ports:
           - containerPort: 8080
