@@ -8,7 +8,7 @@ spec:
     blueGreen: 
       activeService: appuio
       previewService: appuio-preview
-      autoPromotionEnabled: false
+      autoPromotionEnabled: true
   replicas: 1
   template:
     spec:
