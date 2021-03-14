@@ -17,4 +17,4 @@ spec:
           image: tsurankov/example-spring-boot-helloworld:1.2.0
           env:
           - name: JAVA_OPTS
-            value: -XX:+PrintFlagsFinal
+            value: -XX:+UseContainerSupport -XX:MinRAMPercentage=50.0 -XX:MaxRAMPercentage=80.0
