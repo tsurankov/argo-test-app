@@ -9,7 +9,7 @@ spec:
       activeService: example-spring-boot-prod-01
       previewService: example-spring-boot-preview-prod-01
       autoPromotionEnabled: false
-  replicas: 1
+  replicas: 2
   template:
     spec:
       containers:
