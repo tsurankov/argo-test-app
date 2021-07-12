@@ -4,15 +4,15 @@ kind: Ingress
 metadata:
   annotations:
     kubernetes.io/ingress.class: nginx
-  name: appuio
+  name: example-spring-boot
 spec:
   rules:
-    - host: appuio.local
+    - host: example-spring-boot.crinfra.net
       http:
         paths:
           - backend:
               service:
-                name: appuio
+                name: example-spring-boot
                 port:
                   number: 8080
             path: /

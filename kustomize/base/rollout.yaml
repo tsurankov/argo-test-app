@@ -2,27 +2,26 @@
 apiVersion: argoproj.io/v1alpha1  # Changed from apps/v1
 kind: Rollout                     # Changed from Deployment
 metadata:
-  name: appuio
+  name: example-spring-boot
   labels:
-    app: appuio
+    app: example-spring-boot
 spec:
   strategy:
     blueGreen: 
-      activeService: appuio
-      previewService: appuio-preview
+      activeService: example-spring-boot
+      previewService: example-spring-boot-preview
       autoPromotionEnabled: false
   replicas: 1
   selector:
     matchLabels:
-      app: appuio
+      app: example-spring-boot
   template:
     metadata:
-      name: appuio
       labels:
-        app: appuio
+        app: example-spring-boot
     spec:
       containers:
-        - name: appuio
+        - name: example-spring-boot
           image: tsurankov/example-spring-boot-helloworld:1.0.0
           imagePullPolicy: Always
           ports:

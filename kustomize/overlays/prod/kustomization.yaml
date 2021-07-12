@@ -1,5 +1,6 @@
 ---
-namespace: appuio-prod
+namespace: test-argo-prod
+nameSuffix: -prod-01
 bases:
 - ../../base
 patchesStrategicMerge:

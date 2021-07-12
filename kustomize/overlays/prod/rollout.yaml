@@ -2,16 +2,16 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Rollout
 metadata:
-  name: appuio
+  name: example-spring-boot
 spec:
   strategy:
     blueGreen: 
-      activeService: appuio
-      previewService: appuio-preview
-      autoPromotionEnabled: true
+      activeService: example-spring-boot
+      previewService: example-spring-boot-preview
+      autoPromotionEnabled: false
   replicas: 1
   template:
     spec:
       containers:
-        - name: appuio
+        - name: example-spring-boot
           image: tsurankov/example-spring-boot-helloworld:1.2.0
