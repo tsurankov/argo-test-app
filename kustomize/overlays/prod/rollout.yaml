@@ -6,8 +6,8 @@ metadata:
 spec:
   strategy:
     blueGreen: 
-      activeService: example-spring-boot
-      previewService: example-spring-boot-preview
+      activeService: example-spring-boot-prod-01
+      previewService: example-spring-boot-preview-prod-01
       autoPromotionEnabled: false
   replicas: 1
   template:
