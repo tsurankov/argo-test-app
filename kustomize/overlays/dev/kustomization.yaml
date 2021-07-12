@@ -1,8 +1,12 @@
 ---
 namespace: test-argo-dev
 nameSuffix: -dev-01
+commonLabels:
+  deployment: example-spring-boot-dev-01
+  env: dev
 bases:
 - ../../base
 patchesStrategicMerge:
+- ingress-preview.yaml
 - ingress.yaml
 - rollout.yaml
